@@ -11,7 +11,7 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // ✅ NOT '*'
+    origin: "https://hor-backend.onrender.com", // ✅ NOT '*'
     credentials: true, // ✅ allow cookies to be sent
   })
 );
