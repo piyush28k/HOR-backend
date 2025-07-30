@@ -21,6 +21,16 @@ export const getProfile = async (req, res) => {
   }
 };
 
+export const allProfiles = async (req, res) => {
+  try {
+    const profiles = await profileModel.find();
+    res.json(profiles);
+  } catch (error) {
+    console.error("Error fetching profiles:", error);
+    res.status(500).json({ msg: "Server error" });
+  }
+};
+
 export const updateProfile = async (req, res) => {
   try {
     const { userId, name, photo, title, location, bio, languages, skills, Experience, education, certifications } = req.body;
