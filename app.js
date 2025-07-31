@@ -11,10 +11,11 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: "https://hor-backend.onrender.com", // ✅ NOT '*'
-    credentials: true, // ✅ allow cookies to be sent
+    origin: ["http://localhost:5173", "https://hor123.netlify.app/"],
+    credentials: true,
   })
 );
+
 
 const PORT = process.env.PORT || 5000;
 const MONGO_URL = process.env.DATABASE_URL
