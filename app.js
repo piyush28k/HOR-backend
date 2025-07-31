@@ -11,10 +11,11 @@ dotenv.config();
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://hor123.netlify.app/"],
+    origin: ['http://localhost:5173', 'https://hor123.netlify.app'],
     credentials: true,
   })
 );
+
 
 
 const PORT = process.env.PORT || 5000;

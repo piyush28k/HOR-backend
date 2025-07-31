@@ -1,6 +1,9 @@
 import express from 'express';
 import { getProfile, updateProfile ,allProfiles} from '../controller/profile.controller.js';
 import upload from "../middlewares/upload.js";
+import cors from 'cors';
+app.use(cors({ origin: ['http://localhost:5173', 'https://hor123.netlify.app'], credentials: true }));
+
 
 const route = express.Router();
     
