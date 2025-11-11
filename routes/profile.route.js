@@ -1,9 +1,11 @@
 import express from 'express';
-import { getProfile, updateProfile ,allProfiles} from '../controller/profile.controller.js';
+import { getProfile, updateProfile ,allProfiles,addGigs,deleteGig} from '../controller/profile.controller.js';
 
 const route = express.Router();
     
 route.post('/getprofile', getProfile);
+route.post('/addgig',addGigs)
+route.post('/deletegig',deleteGig)
 route.put('/updateprofile', updateProfile);
 route.get('/allprofiles', allProfiles);
 
